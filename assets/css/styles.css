@@ -1,0 +1,11 @@
+/* Main Stylesheet for Santiago Invierte */
+
+/* Custom fonts or overrides can go here */
+body {
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Example of a custom utility if needed */
+.text-brand {
+    color: #0a2642;
+}

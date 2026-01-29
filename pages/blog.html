@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog - santiago.invierte</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a2642",
+                        "action-green": "#2E7D6F",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "text-main": "#111827",
+                        "text-muted": "#517394",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Lexend", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-main font-body">
+    <div class="layout-container flex flex-col min-h-screen">
+        <header class="flex items-center justify-between border-b px-10 py-4 bg-white sticky top-0 z-50">
+            <div class="flex items-center gap-4 text-primary">
+                <h2 class="text-lg font-bold">santiago.invierte</h2>
+            </div>
+            <nav class="flex items-center gap-8 hidden md:flex">
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="../index.html">Inicio</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="cursos.html">Cursos</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="servicios.html">Servicios</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-primary"
+                    href="blog.html">Blog</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="sobre-mi.html">Sobre Mí</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="contacto.html">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="bg-primary text-white rounded-lg px-4 py-2 text-sm font-bold">Acceso</button>
+            </div>
+        </header>
+
+        <main class="flex-1 max-w-[1200px] w-full mx-auto px-6 py-12">
+            <h1 class="text-3xl font-bold text-primary mb-8">Blog y Noticias</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <article class="bg-white p-6 rounded-xl shadow-sm border">
+                    <span class="text-action-green text-sm font-bold">IA & Noticias</span>
+                    <h3 class="text-xl font-bold mt-2">La revolución de los agentes autónomos</h3>
+                    <p class="text-text-muted mt-2">Cómo los agentes están cambiando la forma de trabajar.</p>
+                    <a href="#" class="inline-block mt-4 text-primary font-bold hover:underline">Leer más</a>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow-sm border">
+                    <span class="text-action-green text-sm font-bold">Tutoriales</span>
+                    <h3 class="text-xl font-bold mt-2">Cómo usar ChatGPT para Excel</h3>
+                    <p class="text-text-muted mt-2">Guía paso a paso para principiantes.</p>
+                    <a href="#" class="inline-block mt-4 text-primary font-bold hover:underline">Leer más</a>
+                </article>
+            </div>
+        </main>
+
+        <footer class="w-full bg-primary text-white py-8 text-center text-sm">
+            &copy; 2024 santiago.invierte.
+        </footer>
+    </div>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

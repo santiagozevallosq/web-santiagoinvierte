@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Home - santiago.invierte</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Google Fonts: Lexend -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols for Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a2642",
+                        "primary-foreground": "#ffffff",
+                        "action-green": "#2E7D6F",
+                        "accent": "#2E7D6F",
+                        "accent-foreground": "#ffffff",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "text-main": "#111827",
+                        "text-muted": "#517394",
+                        "secondary": "#f1f5f9"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Lexend", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-main font-body">
+
+    <!-- Navbar -->
+    <div class="layout-container flex flex-col min-h-screen">
+        <header class="flex items-center justify-between border-b px-6 md:px-10 py-4 bg-white sticky top-0 z-50">
+            <div class="flex items-center gap-4 text-primary">
+                <h2 class="text-lg font-bold">santiago.invierte</h2>
+            </div>
+            <nav class="flex items-center gap-6 hidden md:flex">
+                <a class="text-sm font-medium hover:text-primary transition-colors text-primary"
+                    href="index.html">Inicio</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="pages/cursos.html">Cursos</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="pages/servicios.html">Servicios</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="pages/blog.html">Blog</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="pages/sobre-mi.html">Sobre Mí</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="pages/contacto.html">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <!-- Mobile Menu Button (Visible only on mobile) -->
+                <button class="md:hidden text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <button
+                    class="bg-primary text-white rounded-lg px-4 py-2 text-sm font-bold hidden md:block">Acceso</button>
+            </div>
+        </header>
+
+        <main class="flex flex-col w-full">
+
+            <!-- Hero Section -->
+            <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-primary">
+                <!-- Background Image with Overlay -->
+                <div class="absolute inset-0 z-0 opacity-20"
+                    style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2340&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                </div>
+                <div class="absolute inset-0 z-0 bg-primary/90"></div>
+
+                <div class="relative z-10 w-full max-w-[1200px] mx-auto px-6 py-20 text-white">
+                    <div class="max-w-3xl animate-fade-in-up">
+                        <span
+                            class="inline-block px-4 py-2 rounded-full bg-action-green/20 text-action-green text-sm font-medium mb-6 bg-white/10 text-white border border-white/20">
+                            IA Generativa Aplicada
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                            Aprende a usar Inteligencia Artificial para <span
+                                class="text-action-green text-teal-300">multiplicar tu productividad</span>
+                        </h1>
+                        <p class="text-xl text-white/80 mb-8 leading-relaxed">
+                            Enseño a usar IA generativa de forma práctica para obtener resultados reales, sin necesidad
+                            de saber programar. Talleres, cursos y recursos aplicables desde el primer día.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="pages/cursos.html"
+                                class="flex items-center justify-center bg-action-green hover:bg-[#25665b] text-white text-lg font-bold px-8 py-4 rounded-lg transition-colors">
+                                Ver Cursos y Talleres
+                                <span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+                            </a>
+                            <a href="pages/blog.html"
+                                class="flex items-center justify-center border-2 border-white/30 text-white hover:bg-white/10 text-lg font-bold px-8 py-4 rounded-lg transition-colors">
+                                Recursos Gratuitos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problems Section -->
+            <section class="py-20 bg-secondary">
+                <div class="w-full max-w-[1200px] mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-text-main mb-4">¿Te suena familiar?</h2>
+                        <p class="text-lg text-text-muted">Estos son los desafíos más comunes que enfrentan los
+                            profesionales hoy</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md transition-shadow">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-action-green/10 flex items-center justify-center mb-6 text-action-green">
+                                <span class="material-symbols-outlined text-3xl">schedule</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Pierdes tiempo</h3>
+                            <p class="text-text-muted">Horas de trabajo manual en tareas repetitivas que podrían
+                                automatizarse.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md transition-shadow">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-action-green/10 flex items-center justify-center mb-6 text-action-green">
+                                <span class="material-symbols-outlined text-3xl">bolt</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Abrumado por la IA</h3>
+                            <p class="text-text-muted">Demasiadas herramientas y tutoriales. No sabes por dónde empezar.
+                            </p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md transition-shadow">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-action-green/10 flex items-center justify-center mb-6 text-action-green">
+                                <span class="material-symbols-outlined text-3xl">target</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Quieres práctica</h3>
+                            <p class="text-text-muted">Buscas soluciones aplicables hoy, no conceptos abstractos
+                                futuristas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offerings Section -->
+            <section class="py-20 bg-white">
+                <div class="w-full max-w-[1200px] mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-text-main mb-4">Lo que ofrezco</h2>
+                        <p class="text-lg text-text-muted">Soluciones prácticas para cada etapa de tu aprendizaje</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a href="pages/cursos.html"
+                            class="group block h-full bg-white border border-gray-200 p-6 rounded-xl hover:shadow-lg hover:border-action-green transition-all">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center mb-5 group-hover:bg-action-green transition-colors">
+                                <span class="material-symbols-outlined">video_camera_front</span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-action-green transition-colors">Talleres
+                                en Vivo</h3>
+                            <p class="text-sm text-text-muted">Sesiones interactivas donde aprendes haciendo.</p>
+                        </a>
+                        <a href="pages/cursos.html"
+                            class="group block h-full bg-white border border-gray-200 p-6 rounded-xl hover:shadow-lg hover:border-action-green transition-all">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center mb-5 group-hover:bg-action-green transition-colors">
+                                <span class="material-symbols-outlined">school</span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-action-green transition-colors">Cursos
+                                Grabados</h3>
+                            <p class="text-sm text-text-muted">Formación estructurada a tu ritmo.</p>
+                        </a>
+                        <a href="pages/servicios.html"
+                            class="group block h-full bg-white border border-gray-200 p-6 rounded-xl hover:shadow-lg hover:border-action-green transition-all">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center mb-5 group-hover:bg-action-green transition-colors">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-action-green transition-colors">Para
+                                Empresas</h3>
+                            <p class="text-sm text-text-muted">Transformación digital para equipos.</p>
+                        </a>
+                        <a href="pages/blog.html"
+                            class="group block h-full bg-white border border-gray-200 p-6 rounded-xl hover:shadow-lg hover:border-action-green transition-all">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center mb-5 group-hover:bg-action-green transition-colors">
+                                <span class="material-symbols-outlined">description</span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2 group-hover:text-action-green transition-colors">Recursos
+                                Gratuitos</h3>
+                            <p class="text-sm text-text-muted">Guías y prompts listos para usar.</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Differentials Section -->
+            <section class="py-20 bg-primary text-white">
+                <div class="w-full max-w-[1200px] mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Mi enfoque es diferente</h2>
+                        <p class="text-xl text-white/80">No es otro curso teórico. Es formación para aplicar mañana
+                            mismo.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center p-8">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6 text-action-green">
+                                <span class="material-symbols-outlined text-4xl text-teal-300">verified</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Práctico 100%</h3>
+                            <p class="text-white/70">Cada concepto viene con ejercicios de trabajo real.</p>
+                        </div>
+                        <div class="text-center p-8">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6 text-action-green">
+                                <span class="material-symbols-outlined text-4xl text-teal-300">translate</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Sin Tecnicismos</h3>
+                            <p class="text-white/70">Explicaciones claras para cualquier nivel técnico.</p>
+                        </div>
+                        <div class="text-center p-8">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6 text-action-green">
+                                <span class="material-symbols-outlined text-4xl text-teal-300">trending_up</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Resultados Medibles</h3>
+                            <p class="text-white/70">Aprende a medir el impacto de la IA en tu día a día.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Target Audience (Who is this for) -->
+            <section class="py-20 bg-white">
+                <div class="w-full max-w-[1200px] mx-auto px-6">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                        <!-- For You If... -->
+                        <div>
+                            <h2 class="text-3xl font-bold mb-8">Esto es para ti si...</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-action-green mt-1">check_circle</span>
+                                    <span class="text-lg">Quieres optimizar tu trabajo diario.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-action-green mt-1">check_circle</span>
+                                    <span class="text-lg">Eres emprendedor y quieres escalar sin más costos.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-action-green mt-1">check_circle</span>
+                                    <span class="text-lg">Buscas ventaja competitiva profesional.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Not For You If... -->
+                        <div>
+                            <h2 class="text-3xl font-bold mb-8">No es para ti si...</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-red-500 mt-1">cancel</span>
+                                    <span class="text-lg text-text-muted">Buscas "dinero fácil" sin esfuerzo.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-red-500 mt-1">cancel</span>
+                                    <span class="text-lg text-text-muted">Solo quieres teoría académica.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-red-500 mt-1">cancel</span>
+                                    <span class="text-lg text-text-muted">Esperas aprender programación avanzada.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-20 bg-secondary text-center">
+                <div class="w-full max-w-3xl mx-auto px-6">
+                    <div class="w-16 h-16 rounded-2xl bg-action-green/10 flex items-center justify-center mx-auto mb-6">
+                        <span class="material-symbols-outlined text-4xl text-action-green">group</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Únete a la comunidad</h2>
+                    <p class="text-lg text-text-muted mb-8">
+                        Más de 500 profesionales ya están aprendiendo IA juntos. Tips diarios, recursos y networking.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#"
+                            class="bg-action-green hover:bg-[#25665b] text-white text-lg font-bold px-8 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            Únete a WhatsApp
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                        <a href="pages/blog.html"
+                            class="bg-transparent border-2 border-primary text-primary hover:bg-primary/5 text-lg font-bold px-8 py-3 rounded-lg transition-colors">
+                            Ver Blog
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full bg-primary text-white py-16">
+            <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1">
+                    <h2 class="text-xl font-bold mb-4">santiago.invierte</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Empoderando a profesionales con IA práctica para el mundo real.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-action-green">Explorar</h4>
+                    <ul class="flex flex-col gap-3 text-sm text-gray-400">
+                        <li><a href="pages/cursos.html" class="hover:text-white">Cursos</a></li>
+                        <li><a href="pages/servicios.html" class="hover:text-white">Servicios</a></li>
+                        <li><a href="pages/blog.html" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-action-green">Legal</h4>
+                    <ul class="flex flex-col gap-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white">Términos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-action-green">Contacto</h4>
+                    <p class="text-sm text-gray-400">hola@santiagoinvierte.com</p>
+                </div>
+            </div>
+            <div
+                class="max-w-[1200px] mx-auto px-6 mt-16 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+                &copy; 2024 santiago.invierte. Todos los derechos reservados.
+            </div>
+        </footer>
+
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
