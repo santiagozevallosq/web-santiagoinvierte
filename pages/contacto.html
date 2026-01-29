@@ -8,11 +8,13 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Google Fonts & Icons -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script id="tailwind-config">
         tailwind.config = {
@@ -26,6 +28,7 @@
                         "background-dark": "#111921",
                         "text-main": "#111827",
                         "text-muted": "#517394",
+                        "secondary": "#f1f5f9"
                     },
                     fontFamily: {
                         "display": ["Lexend", "sans-serif"],
@@ -35,15 +38,26 @@
             },
         }
     </script>
+    <style>
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-text-main font-body">
+<body class="bg-background-light text-text-main font-body">
+
     <div class="layout-container flex flex-col min-h-screen">
-        <header class="flex items-center justify-between border-b px-10 py-4 bg-white sticky top-0 z-50">
+        <!-- Navbar -->
+        <header class="flex items-center justify-between border-b px-6 md:px-10 py-4 bg-white sticky top-0 z-50">
             <div class="flex items-center gap-4 text-primary">
-                <h2 class="text-lg font-bold">santiago.invierte</h2>
+                <a href="../index.html" class="text-lg font-bold z-50 relative">santiago.invierte</a>
             </div>
-            <nav class="flex items-center gap-8 hidden md:flex">
+            <nav class="flex items-center gap-6 hidden md:flex">
                 <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
                     href="../index.html">Inicio</a>
                 <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
@@ -53,46 +67,241 @@
                 <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
                     href="blog.html">Blog</a>
                 <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
+                    href="comunidad.html">Comunidad</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-text-muted"
                     href="sobre-mi.html">Sobre Mí</a>
                 <a class="text-sm font-medium hover:text-primary transition-colors text-primary"
                     href="contacto.html">Contacto</a>
             </nav>
             <div class="flex items-center gap-4">
-                <button class="bg-primary text-white rounded-lg px-4 py-2 text-sm font-bold">Acceso</button>
+                <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
         </header>
 
-        <main class="flex-1 max-w-[800px] w-full mx-auto px-6 py-12">
-            <h1 class="text-3xl font-bold text-primary mb-8 text-center">Contáctanos</h1>
-            <div class="bg-white p-8 rounded-xl shadow-sm border">
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Nombre</label>
-                        <input type="text"
-                            class="w-full border-gray-300 rounded-lg shadow-sm focus:border-action-green focus:ring-action-green"
-                            placeholder="Tu nombre">
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden backdrop-blur-sm transition-opacity">
+        </div>
+
+        <!-- Mobile Menu Sidebar -->
+        <div id="mobile-menu"
+            class="fixed top-0 left-0 w-[80%] max-w-[300px] h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+            <div class="p-6 border-b flex justify-between items-center">
+                <span class="font-bold text-primary text-lg">Menú</span>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-primary">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+            <nav class="flex-1 overflow-y-auto py-6 px-6 flex flex-col gap-2">
+                <a class="text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-primary px-4 py-3 rounded-lg transition-colors"
+                    href="../index.html">Inicio</a>
+                <a class="text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-primary px-4 py-3 rounded-lg transition-colors"
+                    href="cursos.html">Cursos</a>
+                <a class="text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-primary px-4 py-3 rounded-lg transition-colors"
+                    href="servicios.html">Servicios</a>
+                <a class="text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-primary px-4 py-3 rounded-lg transition-colors"
+                    href="blog.html">Blog</a>
+                <a class="text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-primary px-4 py-3 rounded-lg transition-colors"
+                    href="comunidad.html">Comunidad</a>
+                <a class="text-base font-medium text-gray-600 hover:bg-gray-50 hover:text-primary px-4 py-3 rounded-lg transition-colors"
+                    href="sobre-mi.html">Sobre Mí</a>
+                <a class="text-base font-medium text-primary bg-gray-50 px-4 py-3 rounded-lg"
+                    href="contacto.html">Contacto</a>
+            </nav>
+            <div class="p-6 border-t">
+                <button class="w-full bg-primary text-white rounded-lg px-4 py-3 text-sm font-bold">Acceso
+                    Alumnos</button>
+            </div>
+        </div>
+
+        <main class="flex-1 w-full mx-auto pb-20">
+            <!-- Header -->
+            <section class="bg-primary text-white py-16 px-6 text-center">
+                <h1 class="text-3xl md:text-5xl font-black mb-6">Hablemos de tu proyecto</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">
+                    ¿Tienes preguntas sobre los cursos? ¿Buscas una capacitación para tu equipo? ¿Quieres colaborar?
+                    Estoy aquí para ayudarte.
+                </p>
+            </section>
+
+            <div class="max-w-[1000px] mx-auto px-6 -mt-10">
+                <!-- Quick Contacts -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <!-- WhatsApp -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex items-center justify-between hover:border-action-green transition-all group">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary">WhatsApp</h3>
+                                <p class="text-xs text-text-muted">La forma más rápida</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/..." target="_blank"
+                            class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-green-700 transition-colors">
+                            Enviar mensaje
+                        </a>
                     </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
-                        <input type="email"
-                            class="w-full border-gray-300 rounded-lg shadow-sm focus:border-action-green focus:ring-action-green"
-                            placeholder="tu@email.com">
+                    <!-- Email -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex items-center justify-between hover:border-primary transition-all group">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-2xl">mail</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary">Email</h3>
+                                <p class="text-xs text-text-muted">Consultas formales</p>
+                            </div>
+                        </div>
+                        <a href="mailto:contacto@santiagoinvierte.com"
+                            class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-900 transition-colors">
+                            Enviar correo
+                        </a>
                     </div>
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Mensaje</label>
-                        <textarea
-                            class="w-full border-gray-300 rounded-lg shadow-sm focus:border-action-green focus:ring-action-green h-32"
-                            placeholder="¿En qué podemos ayudarte?"></textarea>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Main Form -->
+                    <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+                        <h2 class="text-2xl font-bold text-primary mb-2">Envíame un mensaje</h2>
+                        <p class="text-text-muted mb-8 text-sm">Completa el formulario y te responderé lo antes posible.
+                        </p>
+
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Nombre</label>
+                                    <input type="text" name="name"
+                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-action-green focus:ring-action-green py-3"
+                                        placeholder="Tu nombre" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                                    <input type="email" name="email"
+                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-action-green focus:ring-action-green py-3"
+                                        placeholder="tu@email.com" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Asunto</label>
+                                <select name="subject"
+                                    class="w-full border-gray-300 rounded-lg shadow-sm focus:border-action-green focus:ring-action-green py-3">
+                                    <option value="" disabled selected>¿Sobre qué quieres hablar?</option>
+                                    <option value="cursos">Información sobre cursos</option>
+                                    <option value="empresa">Capacitación para empresas</option>
+                                    <option value="consultoria">Consultoría 1 a 1</option>
+                                    <option value="otro">Otro tema</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Mensaje</label>
+                                <textarea name="message"
+                                    class="w-full border-gray-300 rounded-lg shadow-sm focus:border-action-green focus:ring-action-green h-32 py-3"
+                                    placeholder="Cuéntame más sobre tu consulta..." required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-[#081f36] transition-colors flex items-center justify-center gap-2">
+                                Enviar mensaje
+                                <span class="material-symbols-outlined text-sm">send</span>
+                            </button>
+                        </form>
                     </div>
-                    <button type="submit"
-                        class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-[#081f36] transition-colors">Enviar
-                        Mensaje</button>
-                </form>
+
+                    <!-- Sidebar info -->
+                    <div class="space-y-8">
+                        <!-- Info Box -->
+                        <div class="bg-secondary p-6 rounded-xl">
+                            <h3 class="font-bold text-primary mb-4">Información de contacto</h3>
+                            <ul class="space-y-4 text-sm">
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-action-green">mail</span>
+                                    <a href="mailto:contacto@santiagoinvierte.com"
+                                        class="hover:text-action-green">contacto@santiagoinvierte.com</a>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-brands fa-whatsapp text-action-green text-lg w-6 text-center"></i>
+                                    <span>+51 999 999 999</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-action-green">schedule</span>
+                                    <span>Respuesta < 24h (L-V)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- FAQ -->
+                        <div>
+                            <h3 class="font-bold text-primary mb-4">Preguntas Frecuentes</h3>
+                            <div class="space-y-3">
+                                <details
+                                    class="group bg-white rounded-lg border border-gray-200 open:border-action-green open:ring-1 open:ring-action-green transition-all">
+                                    <summary
+                                        class="flex items-center justify-between p-4 cursor-pointer font-bold text-sm text-primary select-none">
+                                        ¿Cuánto tardas en responder?
+                                        <span
+                                            class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                    </summary>
+                                    <div class="px-4 pb-4 text-sm text-text-muted">
+                                        Normalmente respondo en menos de 24 horas en días laborables.
+                                    </div>
+                                </details>
+                                <details
+                                    class="group bg-white rounded-lg border border-gray-200 open:border-action-green open:ring-1 open:ring-action-green transition-all">
+                                    <summary
+                                        class="flex items-center justify-between p-4 cursor-pointer font-bold text-sm text-primary select-none">
+                                        ¿Capacitaciones presenciales?
+                                        <span
+                                            class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                    </summary>
+                                    <div class="px-4 pb-4 text-sm text-text-muted">
+                                        Sí, ofrezco formación tanto virtual como presencial para empresas e
+                                        instituciones.
+                                    </div>
+                                </details>
+                                <details
+                                    class="group bg-white rounded-lg border border-gray-200 open:border-action-green open:ring-1 open:ring-action-green transition-all">
+                                    <summary
+                                        class="flex items-center justify-between p-4 cursor-pointer font-bold text-sm text-primary select-none">
+                                        ¿Incluyen certificado?
+                                        <span
+                                            class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                    </summary>
+                                    <div class="px-4 pb-4 text-sm text-text-muted">
+                                        Sí, todos los cursos y capacitaciones incluyen certificado de participación.
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alternative CTA -->
+                <div class="mt-20 text-center bg-green-50 rounded-2xl p-8 border border-green-100">
+                    <h2 class="text-2xl font-bold text-primary mb-2">¿Prefieres algo más rápido?</h2>
+                    <p class="text-text-muted mb-6">Únete a la comunidad de WhatsApp y conecta directamente conmigo y
+                        con otros profesionales.</p>
+                    <a href="#"
+                        class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition-colors">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        Unirme a WhatsApp
+                    </a>
+                </div>
+
             </div>
         </main>
 
-        <footer class="w-full bg-primary text-white py-8 text-center text-sm">
-            &copy; 2024 santiago.invierte.
+        <footer class="w-full bg-primary text-white py-16 text-center">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2024 santiago.invierte. Todos los derechos reservados.
+                </p>
+            </div>
         </footer>
     </div>
     <script src="../assets/js/main.js"></script>

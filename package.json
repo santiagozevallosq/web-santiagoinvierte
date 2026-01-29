@@ -1,0 +1,26 @@
+{
+  "name": "web-santiagoinvierte",
+  "version": "1.0.0",
+  "description": "web-santiagoinvierte",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node scripts/build-blog.js",
+    "publish": "npm run build && git add . && git commit -m \"New post published\" && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiagozevallosq/web-santiagoinvierte.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiagozevallosq/web-santiagoinvierte/issues"
+  },
+  "homepage": "https://github.com/santiagozevallosq/web-santiagoinvierte#readme",
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "marked": "^17.0.1"
+  }
+}
