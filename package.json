@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node scripts/build-blog.js",
-    "publish": "npm run build && git add . && git commit -m \"New post published\" && git push"
+    "publish": "npm run build && git add . && git commit -m \"New post published\" && git push",
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "dependencies": {
     "front-matter": "^4.0.2",
     "marked": "^17.0.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }

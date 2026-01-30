@@ -1,0 +1,176 @@
+[
+    {
+        "id": "id5",
+        "title": "Taller de creación de dashboards y mini aplicaciones",
+        "description": "Este taller práctico enseña cómo utilizar herramientas de Inteligencia Artificial generativa para crear dashboards interactivos y mini aplicaciones funcionales sin necesidad de saber programar ni contar con experiencia previa en análisis de datos o desarrollo.",
+        "level": {
+            "text": "Principiante",
+            "color": "green"
+        },
+        "badges": [
+            {
+                "text": "Popular",
+                "color": "yellow",
+                "icon": "⭐"
+            }
+        ],
+        "features": [
+            {
+                "icon": "schedule",
+                "text": "3 horas de clase"
+            },
+            {
+                "icon": "videocam",
+                "text": "Grabación completa"
+            },
+            {
+                "icon": "layers",
+                "text": "Acceso a materiales y recursos complementarios"
+            }
+        ],
+        "cta": {
+            "text": "Más información",
+            "link": "https://sassy-coconut-c1f.notion.site/Taller-pr-ctico-creaci-n-de-dashboards-y-mini-aplicaciones-2d79870cd17f805e9051c48da2f0fec8?source=copy_link",
+            "style": "primary",
+            "icon": "open_in_new"
+        }
+    },
+    {
+        "id": "id4",
+        "title": "Taller de creación de videos con IA",
+        "description": "Este taller práctico enseña el uso de herramientas de Inteligencia Artificial generativa para crear videos sin necesidad de conocimientos previos en diseño gráfico ni edición avanzada.",
+        "level": {
+            "text": "Popular",
+            "color": "blue"
+        },
+        "badges": [],
+        "features": [
+            {
+                "icon": "schedule",
+                "text": "3 horas de clase"
+            },
+            {
+                "icon": "play_circle",
+                "text": "Grabación completa"
+            },
+            {
+                "icon": "group",
+                "text": "Acceso a materiales y recursos complementarios"
+            }
+        ],
+        "cta": {
+            "text": "Más información",
+            "link": "https://sassy-coconut-c1f.notion.site/Taller-pr-ctico-creaci-n-de-videos-con-IA-generativa-2d69870cd17f80b68d45c9ead370c454",
+            "style": "primary",
+            "icon": "open_in_new"
+        }
+    },
+    {
+        "id": "id3",
+        "title": "Taller de creación y edición de imagenes realistas con IA",
+        "description": "Durante la sesión, aprenderás a transformar ideas en imágenes de alta calidad, editar elementos visuales, mantener consistencia estética y generar piezas listas para redes sociales, presentaciones, documentos corporativos y proyectos de marca personal o de negocio.",
+        "level": {
+            "text": "Avanzado",
+            "color": "purple"
+        },
+        "badges": [
+            {
+                "text": "Popular",
+                "color": "gray",
+                "icon": "⏳"
+            }
+        ],
+        "features": [
+            {
+                "icon": "timer",
+                "text": "3 horas de sesión"
+            },
+            {
+                "icon": "video_camera_front",
+                "text": "Grabación completa"
+            },
+            {
+                "icon": "description",
+                "text": "Acceso a materiales y recursos complementarios"
+            }
+        ],
+        "cta": {
+            "text": "Más información",
+            "link": "https://sassy-coconut-c1f.notion.site/Taller-pr-ctico-creaci-n-y-edici-n-de-im-genes-realistas-con-IA-generativa-2d19870cd17f8038b525d94585cd35d5",
+            "style": "primary",
+            "icon": "notifications"
+        }
+    },
+    {
+        "id": "id2",
+        "title": "Curso de IA para emprendedores y marca personal",
+        "description": "Aprende a usar herramientas de IA para crear, posicionar y escalar tu marca personal o emprendimiento: desde la idea y el diseño hasta el contenido y la voz de tu marca.",
+        "level": {
+            "text": "Básico",
+            "color": "purple"
+        },
+        "badges": [
+            {
+                "text": "Popular",
+                "color": "gray",
+                "icon": "⏳"
+            }
+        ],
+        "features": [
+            {
+                "icon": "timer",
+                "text": "12 horas de clases"
+            },
+            {
+                "icon": "video_camera_front",
+                "text": "Grabación completa"
+            },
+            {
+                "icon": "description",
+                "text": "Temas: 1) Fundamentos de IA y prompts, 2) validación de plan de negocios, 3) identidad de marca, 4) creación de imágenes, flyers, etc 5) creación de videos, texto a voz, avatares, 6) creación de mini aplicaciones"
+            }
+        ],
+        "cta": {
+            "text": "Más información",
+            "link": "https://craft-your-future-ai.lovable.app/",
+            "style": "primary",
+            "icon": "notifications"
+        }
+    },
+    {
+        "id": "id1",
+        "title": "Curso productividad 10X usando inteligencia artificial",
+        "description": "IA a tu medida: sabemos que quieres trabajar menos horas, ganar más y no quedarte atrás. Aquí aprenderás a usar la inteligencia artificial de forma estratégica, eligiendo las herramientas que realmente transforman tu día a día.",
+        "level": {
+            "text": "Básico",
+            "color": "purple"
+        },
+        "badges": [
+            {
+                "text": "Popular",
+                "color": "gray",
+                "icon": "⏳"
+            }
+        ],
+        "features": [
+            {
+                "icon": "timer",
+                "text": "12 horas de clases"
+            },
+            {
+                "icon": "video_camera_front",
+                "text": "Grabación completa"
+            },
+            {
+                "icon": "description",
+                "text": "Temas: 1) Fundamentos de IA, 2) Estructura de prompts, 3) ChatGPT el asistente personal 24/7, 4) Gemini la IA conectada con el ecosistema de Google, 5) Notebook LM el cerebro digital, 6) Google AI Studio el laboratorio de IAs de Google"
+            }
+        ],
+        "cta": {
+            "text": "Más información",
+            "link": "https://retro-ai-bootcamp.lovable.app/",
+            "style": "primary",
+            "icon": "notifications"
+        }
+    }
+]
